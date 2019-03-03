@@ -54,14 +54,12 @@ node_modules
 
 * Inside keys.js your file will look like this:
 
-```js
 console.log('this is loaded');
 
 exports.spotify = {
   id: process.env.SPOTIFY_ID,
   secret: process.env.SPOTIFY_SECRET
 };
-```
 
 4. Next, create a file named `.env`, add the following to it, replacing the values with your API keys (no quotes) once you have them:
 
@@ -116,27 +114,17 @@ require("dotenv").config();
 ### What Each Command Should Do
 
 1. `node liri.js concert-this <artist/band name here>`
-
    * This will search the Bands in Town Artist Events API (`"https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"`) for an artist and render the following information about each event to the terminal:
-
      * Name of the venue
-
      * Venue location
-
      * Date of the Event (use moment to format this as "MM/DD/YYYY")
 
 2. `node liri.js spotify-this-song '<song name here>'`
-
    * This will show the following information about the song in your terminal/bash window
-
      * Artist(s)
-
      * The song's name
-
      * A preview link of the song from Spotify
-
      * The album that the song is from
-
    * If no song is provided then your program will default to "The Sign" by Ace of Base.
 
    * You will utilize the [node-spotify-api](https://www.npmjs.com/package/node-spotify-api) package in order to retrieve song information from the Spotify API.
@@ -152,10 +140,7 @@ require("dotenv").config();
    * Step Four: On the next screen, scroll down to where you see your client id and client secret. Copy these values down somewhere, you'll need them to use the Spotify API and the [node-spotify-api package](https://www.npmjs.com/package/node-spotify-api).
 
 3. `node liri.js movie-this '<movie name here>'`
-
    * This will output the following information to your terminal/bash window:
-
-     ```
        * Title of the movie.
        * Year the movie came out.
        * IMDB Rating of the movie.
@@ -175,11 +160,8 @@ require("dotenv").config();
    * You'll use the `axios` package to retrieve data from the OMDB API. Like all of the in-class activities, the OMDB API requires an API key. You may use `trilogy`.
 
 4. `node liri.js do-what-it-says`
-
    * Using the `fs` Node package, LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.
-
      * It should run `spotify-this-song` for "I Want it That Way," as follows the text in `random.txt`.
-
      * Edit the text in random.txt to test out the feature for movie-this and concert-this.
 
 ### BONUS
